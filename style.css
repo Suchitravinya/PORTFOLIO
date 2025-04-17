@@ -312,7 +312,6 @@ footer {
   padding: 1rem;
   margin-top: 2rem;
 }
-
 @media (max-width: 768px) {
   .nav-menu {
     display: flex;
@@ -324,7 +323,27 @@ footer {
     flex-direction: column;
     gap: 10px;
   }
+
+  .card,
+  .timeline-card,
+  .about-card,
+  .contact-card {
+    max-width: 100%;
+    padding: 15px;
+  }
 }
+
+
+@media (max-width: 768px) {
+  .card,
+  .timeline-card,
+  .about-card,
+  .contact-card {
+    max-width: 100%;
+    padding: 15px;
+  }
+}
+
 
 .timeline {
   display: flex;
@@ -423,6 +442,16 @@ footer {
   padding-left: 20px;
   transition: 0.3s ease-in-out;
 }
+.timeline-item .timeline-icon {
+  position: absolute;
+  left: -20px;
+  width: 40px;
+  height: 40px;
+  background-color: #0077b6;
+  border-radius: 50%;
+  z-index: 2;
+}
+
 
 .timeline-item .timeline-content:hover {
   transform: translateX(10px);
@@ -484,7 +513,7 @@ footer {
 }
 
 .hero-section {
-  padding: 100px 50px;
+  padding: 10vw 5vw;
   background: #f8f9fc;
   padding-top: 150px;
 }
@@ -608,3 +637,96 @@ footer {
 }
 
 
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero p,
+  .hero-description {
+    font-size: 1rem;
+  }
+
+  .btn-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .timeline-card {
+    width: 100%;
+    margin-left: 10px;
+  }
+
+  .section-heading {
+    font-size: 1.5rem;
+  }
+
+  .nav-menu a {
+    font-size: 1rem;
+  }
+
+  .hero-image {
+    max-width: 150px;
+  }
+}
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #0a192f;
+    padding: 1rem 0;
+    z-index: 1001;
+  }
+
+  .nav-menu.open {
+    display: flex;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .hero {
+    padding: 60px 15px;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .timeline-item {
+    flex-direction: column;
+  }
+
+  .timeline-left {
+    padding-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .timeline-card {
+    width: 100%;
+  }
+
+  .skills-grid,
+  .project-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  .about-card,
+  .contact-card {
+    padding: 20px;
+  }
+}
