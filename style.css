@@ -312,7 +312,46 @@ footer {
   padding: 1rem;
   margin-top: 2rem;
 }
+.nav-menu {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-toggle {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Mobile styles */
 @media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    background-color: #222;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    z-index: 1000;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-menu a {
+    padding: 10px 20px;
+    text-align: left;
+  }
   .nav-menu {
     display: flex;
     flex-direction: column;
@@ -334,15 +373,8 @@ footer {
 }
 
 
-@media (max-width: 768px) {
-  .card,
-  .timeline-card,
-  .about-card,
-  .contact-card {
-    max-width: 100%;
-    padding: 15px;
-  }
-}
+
+
 
 
 .timeline {
