@@ -642,3 +642,69 @@ footer {
     margin-left: 10px;
   }
 }
+/* Navbar styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 10px 20px;
+  position: relative;
+}
+
+#navToggle {
+  font-size: 28px;
+  color: white;
+  display: none;
+  cursor: pointer;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-menu a {
+  color: white;
+  text-decoration: none;
+}
+
+/* For small screens: make menu vertical and hidden by default */
+@media (max-width: 768px) {
+  #navToggle {
+    display: block;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    background-color: #333;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-menu a {
+    padding: 10px 20px;
+    border-top: 1px solid #444;
+  }
+}
+/* Education section center alignment */
+#education {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.section-content {
+  max-width: 800px;
+  width: 100%;
+}
