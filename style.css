@@ -607,6 +607,7 @@ footer {
   }
 }
 
+.contact-card:hover
 /* ================= Logo & Branding (Optional) ================= */
 .navbar-logo {
   font-size: 1.8rem;
@@ -665,7 +666,7 @@ footer {
 }
 
 .nav-menu a {
-  color: white;
+  color:white;
   text-decoration: none;
 }
 
@@ -678,7 +679,7 @@ footer {
   .nav-menu {
     display: none;
     flex-direction: column;
-    background-color: #333;
+    background-color: white;
     position: absolute;
     top: 60px;
     left: 0;
@@ -692,7 +693,7 @@ footer {
 
   .nav-menu a {
     padding: 10px 20px;
-    border-top: 1px solid #444;
+    color:black
   }
 }
 /* Education section center alignment */
@@ -707,4 +708,61 @@ footer {
 .section-content {
   max-width: 800px;
   width: 100%;
+}
+/* ================= Education Section ================= */
+@media (max-width: 768px) {
+  #education {
+    padding: 40px 10px; /* Adjust padding for mobile */
+  }
+
+  .timeline {
+    display: block; /* Stack the timeline items vertically */
+  }
+
+  .timeline-item {
+    margin-bottom: 30px; /* Add space between items */
+  }
+
+  .timeline-left {
+    display: none; /* Hide the timeline line on mobile */
+  }
+
+  .timeline-card {
+    width: 100%; /* Make cards take up full width */
+    padding: 15px; /* Add padding inside the card */
+    margin: 0; /* Remove margin around cards */
+    border-radius: 8px; /* Optional: for rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a soft shadow */
+  }
+
+
+  .timeline-card h3 {
+    font-size: 1.5rem; /* Adjust heading font size */
+  }
+
+  .year-badge {
+    font-size: 1rem; /* Adjust year font size */
+    margin-left: 10px; /* Space between the year and title */
+  }
+
+  .skills span {
+    display: inline-block; /* Make the skills stack vertically */
+    margin-right: 10px;
+    margin-bottom: 10px;
+    font-size: 0.9rem; /* Adjust skill font size */
+  }
+
+  /* Make the year badge stand out by changing background */
+  .year-badge {
+    background-color: #007bff;
+    color: white;
+    padding: 0.3rem 0.7rem;
+    border-radius: 4px;
+  }
+}
+
+.timeline-container {
+  max-width: 600px;
+  margin: 0 auto; /* Centers it horizontally */
+  padding: 0 1rem; /* Adds spacing on mobile */
 }
